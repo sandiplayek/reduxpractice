@@ -7,6 +7,8 @@ import { About } from './pages/about';
 import Contact from './pages/contact';
 import ClassPage from './pages/classPage';
 import SecondClass from './pages/secondClass';
+import DynamicSegment from './pages/DynamicSegment';
+import DynamicOptional from './pages/DynamicOptional';
 
 function App() {
   //const count = useSelector(state=> state.counter)
@@ -25,6 +27,9 @@ function App() {
       <Route path="/contact" element={<Contact />}></Route>
       <Route path='/class' element={<ClassPage />}></Route>
       <Route path='/secondclass' element={<SecondClass />}></Route>
+      <Route path='/dynamic/:dynamicId' element={<DynamicSegment />}></Route>
+      <Route path='/:lang?/optional/:optionalId' element={<DynamicOptional />}></Route>
+
     </Routes>
     </BrowserRouter>
   );
